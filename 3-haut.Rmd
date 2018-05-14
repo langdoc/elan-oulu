@@ -70,7 +70,8 @@ library(glue)
     - `+` edellinen merkki useamman kerran
     - `?` edellinen merkki on vapaaehtoinen
     - jne …
-- Myös hienostuneemmat haut palautuvat tähän!
+- Myös hienostuneemmat haut palautuvat usein tähän!
+- Mahdollistaa (joskus) ilman annotointeja työskentelyn
 - Elanin kontekstissa `.+` tarkoittaa "näytä sisältö, oli se mitä vain"
 
 # Esimerkkejä

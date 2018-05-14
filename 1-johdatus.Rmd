@@ -17,13 +17,7 @@ library(tidyverse)
 library(glue)
 ```
 
-## Elan-kurssi, Oulu {data-background-image="map_small1.jpg" data-background-size="100%" .textbox}
-
----------------------------------------------------------------------
-
-## ELAN-kurssi {data-background-image="map_small2.jpg" data-background-size="100%" .textbox}
-
-### Johdatus Elaniin ja Elan-korpuksiin
+## Johdatus Elaniin ja Elan-korpuksiin {data-background-image="map_small2.jpg" data-background-size="100%" .textbox}
 
 ### Niko Partanen
 
@@ -85,10 +79,10 @@ library(glue)
 ## HUOM!
 
 - Sinällään vertautuvat täysin mm. EXMARaLDA-korpuksiin:
-    - Nganasan
-    - Selkuppi
-    - Saksan murteet
-- … tai lukuisiin korpuksiin Korpissa jne…
+    - [Nganasan Hampurissa](https://corpora.uni-hamburg.de/hzsk/de/islandora/object/spoken-corpus:nslc-0.1), [Nganasan Moskovassa](http://www.iling-ran.ru/gusev/Nganasan/words/index.php)
+    - [Selkuppi](https://www.slm.uni-hamburg.de/selslc.html)
+    - [Saksan murrekorpus](https://corpora.uni-hamburg.de/hzsk/de/islandora/object/spoken-corpus:sin)
+- … tai lukuisiin korpuksiin [Korpissa](https://korp.csc.fi/) jne…
 
 ! Työväline aina toissijainen suhteessa siihen mitä on tehty
     … muttei täysin irrallaan lopputuloksesta
