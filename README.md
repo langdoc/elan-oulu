@@ -1,6 +1,4 @@
-## Elanin perusteet ja hakutoiminnot -kurssi
-
-Niko Partanen: Elanin perusteet ja hakutoiminnot -kurssi, Oulun yliopisto, 14.-15.5.2018.
+## Niko Partanen: Elanin perusteet ja hakutoiminnot -kurssi, Oulun yliopisto, 14.-15.5.2018.
 
 Kurssi käsittelee Elan-ohjelman käyttöä, korpuksen luomisen kysymyksiä ja Elanin hakutoimintoja. Tämän lisäksi tutustumme Giellateknon infrastruktuuriin ja päivien aikana heränneisiin erityiskysymyksiin.
 
