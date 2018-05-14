@@ -76,6 +76,27 @@ library(glue)
 
 # Esimerkkejä
 
+## {data-background-image="https://imgur.com/rsOk6by.png" data-background-size="100%"}
+
+## {data-background-image="https://imgur.com/bVdODk0.png" data-background-size="100%"}
+
 ## {data-background-image="https://imgur.com/xnLitAU.png" data-background-size="100%"}
 
-## {data-background-image="https://imgur.com/bda0kGR.png" data-background-size="100%"}
+## {data-background-image="https://imgur.com/Ob0BHoi.png" data-background-size="100%"}
+
+## {data-background-image="https://imgur.com/7VyUQpz.png" data-background-size="100%"}
+
+## Huomioitavaa
+
+- Save Query
+- Load Query
+- Query History
+- Mode: Regular expression
+- Fully aligned
+
+## Yleisesti
+
+- Haun kaventamisen pitäisi vähentää tuloksia
+- Näkymän lisäämisen ei pitäisi vaikuttaa (?)
+
+##

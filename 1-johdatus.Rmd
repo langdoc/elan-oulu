@@ -122,13 +122,16 @@ library(glue)
 - Kirjoitetaan tulos ELAN-tiedostoon
 - Korjataan käsin tarpeen mukaan
 
-## Kuva
+## Esimerkki
+
+[Video Dropboxissa](https://www.dropbox.com/sh/k0e3xyy2055447t/AABzIzYwN8LI5RjSuTZk2Euoa?dl=0)
 
 ## Vaatimuksia
 
 1. Litterointi (~) kirjakielen mukaista
 2. Analysaattori erittäin kehittynyt
     - Ainakin tämä toteutuu tiettyjen saamelaiskielten kanssa
+    - Testataan eri kielten kanssa huomenna
 
 # Korpuksen luominen
 

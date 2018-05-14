@@ -60,3 +60,12 @@ library(glue)
     - Eri puhujien puheenvuorojen päällekkäisyydet ja etäisyydet jne
 
 ## {data-background-image="kuvat/annotation_mode_full.png" data-background-size="100%"}
+
+## Rakenteessa huomioitavaa
+
+- **Tier Type** kaikkein tärkein
+- Se määrittelee, millä tiereillä on samanlaista sisältöä
+- Tierien nimet vähemmän tärkeitä, mutta mieluiten systemaattisia
+    - Puhujan id, tai P1, P2 jne.
+    - Elan ei välttämättä paras paikka metadatalle…
+    - … muttei huonoinkaan
