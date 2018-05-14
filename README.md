@@ -14,7 +14,7 @@ Kurssi käsittelee Elan-ohjelman käyttöä, korpuksen luomisen kysymyksiä ja E
 
 **Ti 15.5.**
 
-- klo 9-11.45 Automaattisten parseritoimintojen käyttäminen 
+- klo 9.15-11.45 Automaattisten parseritoimintojen käyttäminen 
 - klo 11.45-12.30 Lounas
 - klo 12.30-14.15 Elanin erityiskysymyksiä 1 
 - klo 14.15-14.30 Tauko
