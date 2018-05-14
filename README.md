@@ -6,11 +6,11 @@ Kurssi käsittelee Elan-ohjelman käyttöä, korpuksen luomisen kysymyksiä ja E
 
 **Ma 14.5.**
 
-- klo 10.00-11.45 [Johdatus Elaniin ja Elan-korpuksiin](./1-johdatus.html)
+- klo 10.00-11.45 [Johdatus Elaniin ja Elan-korpuksiin](https://langdoc.github.io/elan-oulu/1-johdatus.html)
 - klo 11.45-12.30 Lounas
-- klo 12.30-14.15 [Elanin asennus omiin koneisiin ja toimivan käyttöympäristön luominen (Tier-rakenne, kansiot, yms.)](./2-asennus.html)
+- klo 12.30-14.15 [Elanin asennus omiin koneisiin ja toimivan käyttöympäristön luominen (Tier-rakenne, kansiot, yms.)](https://langdoc.github.io/elan-oulu/2-asennus.html)
 - klo 14.15-14.30 Tauko
-- klo 14.30-16.00 [Elanin hakutoiminnot 1](./3-haut.html)
+- klo 14.30-16.00 [Elanin hakutoiminnot 1](https://langdoc.github.io/elan-oulu/3-haut.html)
 
 **Ti 15.5.**
 
