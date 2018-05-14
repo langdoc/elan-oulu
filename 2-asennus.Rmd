@@ -1,0 +1,62 @@
+---
+output: 
+  revealjs::revealjs_presentation:
+    theme: white
+    transition: none
+    css: custom.css
+    self_contained: false
+    center: true
+    reveal_plugins: ["notes"]
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, error=FALSE, dpi = 400,fig.cap = "", cache = T, echo=TRUE)
+library(tidyverse)
+library(glue)
+```
+
+# Elanin asennus {data-background-image="map_small1.jpg" data-background-size="100%" .textbox}
+
+---------------------------------------------------------------------
+
+## Elan
+
+- Kehitetty [Nijmegenin Max Planck -instituutissa](https://tla.mpi.nl/)
+- Ladattavissa ilmaiseksi [täältä](https://tla.mpi.nl/tools/tla-tools/elan/)
+- Avoimen lähdekoodin ohjelma
+- Tehty Java-ohjelmointikielellä
+- Toimii kaikilla käyttöjärjestelmillä
+- Tallentaa tiedoston XML-muotoon
+
+## Yleistä
+
+- ELAN on mielestäni suhteellisen hyvin toimiva ohjelma
+- Ei kovin buginen, ongelmia korjataan nopeasti
+- Pääkehittäjä Han Sloetjes hyvin avulias
+- Tärkein avun lähde: The Language Archiven [ELAN -keskustelufoorumi](https://tla.mpi.nl/forums/software/elan/)
+
+## Huomioita
+
+- ELAN on ensisijaisesti käyttöliittymä ELAN-tiedostoihin
+- Tarkoituksena ei ole tehtävien automatisointi, vaan tarjota visuaalinen **käyttöliittymä**
+- ELANin ympärillä on mahdollista tehdä kaikenlaista automatisaatiota, mutta tässä on omia sudenkuoppiaan
+
+## Tier-rakenne
+
+## {data-background-image="kuvat/annotation_mode_full.png" data-background-size="100%"}
+
+## {data-background-image="kuvat/tier_dependencies.png" data-background-size="100%"}
+
+## Olemassa olevat suhteet
+
+- Annotaatioiden kerroksittaisuus
+    - Hierarkiat
+    - Mikä on minkä alla, sisällä jne.
+- Annotaatioiden peräkkäisyys
+    - Mikä annotaatio seuraa toista
+- Annotaatioiden yhtäaikaisuus
+    - Eri puhujien puheenvuorojen päällekkäisyydet ja etäisyydet jne
+
+## {data-background-image="kuvat/annotation_mode_full.png" data-background-size="100%"}

@@ -1,0 +1,179 @@
+---
+output: 
+  revealjs::revealjs_presentation:
+    theme: white
+    transition: none
+    css: custom.css
+    self_contained: false
+    center: true
+    reveal_plugins: ["notes"]
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, error=FALSE, dpi = 400,fig.cap = "", cache = T, echo=TRUE)
+library(tidyverse)
+library(glue)
+```
+
+## Elan-kurssi, Oulu {data-background-image="map_small1.jpg" data-background-size="100%" .textbox}
+
+---------------------------------------------------------------------
+
+## ELAN-kurssi {data-background-image="map_small2.jpg" data-background-size="100%" .textbox}
+
+### Johdatus Elaniin ja Elan-korpuksiin
+
+### Niko Partanen
+
+# Minä
+
+##
+
+- Teen väitöskirjaani komin kieleen liittyen
+- Työskentelin viime vuodet Freiburgissa, Hampurissa ja Pariisissa
+- Tutkimusaiheita: sosiolingvistiikka, kieliteknologia, komin murteet, syntaksin kuvaus
+- Työskentelen seuraavan vuoden Kotuksen arkistossa (kesäkuusta alkaen)
+
+# Kurssista
+
+##
+
+- Liittyy aiempaan komiksi pidettyyn kurssiin [ELAN вӧдитчӧм](https://langdoc.github.io/elan_kurs/)
+- Sivuaa syksyllä 2017 englanniksi pidettyä kurssia [Advanced analysis and manipulation of ELAN corpus with R and Python](https://github.com/langdoc/elan_lectures) 
+
+## Huomioita
+
+- Luentokalvot sisältävät suunnilleen kaiken minkä puhun
+    - Pedagogisesti ja tyylillisesti huono ratkaisu
+    - Perusteltu materiaalien kurssinulkoisella käytöllä
+- Saatavilla osoitteesta [langdoc.github.io/elan-oulu](https://langdoc.github.io/elan-oulu)
+- … minne kokoa**mme** muutakin aiheeseen liittyvää materiaalia
+    - Michael Rießler, Joshua Wilbur, Rogier Blokland
+
+# ELAN-korpus
+
+## {data-background-image="https://imgur.com/joNv1kn.png" data-background-size="100%"}
+
+## Piirteitä
+
+- Kokoelma puhutun kielen näytteitä
+- Yksi ELAN-tiedosto vastaa yhtä nauhoitusta
+- Sekä audio- että videomateriaaleja
+- Jokaisen puhujan annotaatiot erillä toisistaan
+- Yksi monista vaihtoehdoista
+    - Suhteellisen suosittu
+
+## Esimerkkejä
+
+- [IKDP komisyrjäänin murrekorpus](https://archive.mpi.nl/islandora/object/lat%253A1839_00_0000_0000_0021_64F1_D)
+- [SKN suomen murrekorpus](https://lat.csc.fi/ds/asv/;jsessionid=7D95003DCC28D7C73B064AE900F3E553?0)
+- [Evenkin korpus](https://github.com/lalsnivts/evenki_corpus)
+- [Keetin korpus](https://github.com/lalsnivts/ket_corpus)
+- Eri aineistot [TLA:n arkistossa](https://archive.mpi.nl/)
+- Kokoelmat SOAS:in [ELAR-arkistossa](https://elar.soas.ac.uk/)
+
+## {data-background-image="https://imgur.com/CIVMcYg.png" data-background-size="100%"}
+
+## {data-background-image="https://imgur.com/UOdlO6N.png" data-background-size="100%"}
+
+## {data-background-image="https://imgur.com/8aKrzko.png" data-background-size="100%"}
+
+## {data-background-image="https://imgur.com/8aKrzko.png" data-background-size="100%"}
+
+## HUOM!
+
+- Sinällään vertautuvat täysin mm. EXMARaLDA-korpuksiin:
+    - Nganasan
+    - Selkuppi
+    - Saksan murteet
+- … tai lukuisiin korpuksiin Korpissa jne…
+
+! Työväline aina toissijainen suhteessa siihen mitä on tehty
+    … muttei täysin irrallaan lopputuloksesta
+
+## Ominaisuuksia
+
+- Paljon vaihtelua korpusten:
+    - Koossa
+    - Käyttötavoissa
+    - Aiotuissa käyttötarkoituksissa
+    - Sotkuisuudessa …
+    - … joka kytkeytyy tavallaan laatuun
+
+## Huomioita
+
+- Annotoinnin tarkkuus intonaatiojakso (?)
+- Intonaatiojaksojen alku ja loppu ajoitettu
+- ! Eroaa esimerkiksi keskusteluntutkijoiden tarpeista
+- Periaatteessa tarkempi merkitseminen olisi mahdollista
+    - … mutta suuren työläyden takia kannattaa harkita
+
+## Mihin ELAN sopii parhaiten?
+
+- Litterointi
+    - Vahvuus Wordiin nähden: jokaisella lauseella on puhuja ja aika
+    - Segmentation Mode & Transcription Mode
+    - ! Moni ei käytä, vaikka kannattaisi
+- Hyvät hakutoiminnot
+- Elan-tiedostot voi myös tuoda muihin hakuympäristöihin
+    - Komi-litterointien tuonti Korpiin suunniteltu kesälle 2018
+
+## Uusia metodeja annotointiin
+
+- [Gerstenberger et. al. 2017: Instant Annotations](https://github.com/langdoc/elan-fst)
+- Otetaan ortografian mukaisesti litteroidut lauseet
+- Lähetetään ne Giellateknon analysaattorille
+- Kirjoitetaan tulos ELAN-tiedostoon
+- Korjataan käsin tarpeen mukaan
+
+## Kuva
+
+## Vaatimuksia
+
+1. Litterointi (~) kirjakielen mukaista
+2. Analysaattori erittäin kehittynyt
+    - Ainakin tämä toteutuu tiettyjen saamelaiskielten kanssa
+
+# Korpuksen luominen
+
+## Työvaiheet
+
+1. Tiedoston luominen
+2. Segmentointi
+3. Litterointi
+
+## Tiedoston luominen
+
+- Uusi tiedosto voidaan luoda Elanin template -tiedostoa käyttäen
+   - Tiedostopääte .etf
+   - Voidaan tallentaa mistä tahansa tiedostosta
+   - File > Save as template…
+
+## Segmentointi
+
+## {data-background-image="kuvat/segmentation_mode.png" data-background-size="100%"}
+
+## Katsotaan Elanissa oikeaa tiedostoa
+
+## Litterointi
+
+## {data-background-image="kuvat/transcription_mode.png" data-background-size="100%"}
+
+## {data-background-image="kuvat/annotation_mode.png" data-background-size="100%"}
+
+## {data-background-image="kuvat/annotation_mode_full.png" data-background-size="100%"}
+
+## Huomioita
+
+- Vain yksi monista annotaatiotavoista
+- Mitä halutaan annotoida riippuu täysin siitä, mitä halutaan tutkia
+- Giellateknon analysaattoreiden käyttö saamelaiskielten kanssa erittäin hyvin perusteltavissa oleva valinta
+
+## "Ihannemaailmassa"
+
+- Tieto tunnistamattomista sanoista menisi suoraan Tromssaan
+- Analysaattori ajettaisiin aina päivitetyllä versiolla…
+- … jolloin uudet sanamuodot tunnistuisivat ensiesiintymän jälkeen
+

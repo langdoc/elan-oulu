@@ -1,0 +1,80 @@
+---
+output: 
+  revealjs::revealjs_presentation:
+    theme: white
+    transition: none
+    css: custom.css
+    self_contained: false
+    center: true
+    reveal_plugins: ["notes"]
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, error=FALSE, dpi = 400,fig.cap = "", cache = T, echo=TRUE)
+library(tidyverse)
+library(glue)
+```
+
+## ELAN-kurssi {data-background-image="map_small2.jpg" data-background-size="100%" .textbox}
+### Korpuksesta hakeminen
+
+### Niko Partanen
+
+# Haut
+
+## Oppaita
+
+- Ulrike Moselin [materiaalit](https://tla.mpi.nl/wp-content/uploads/2011/12/Searches_in_ELAN_with_regular_expressions.pdf)
+- Hedvig Skirgårdin [äskettäiset ohjeet](https://blogs.soas.ac.uk/elar/2018/05/10/elan-making-tiers-out-of-search-results/)
+
+## 
+
+- Mahdollisuus tarkastella korpusta
+- Apu tai vaihe tutkimuksessa
+- Korpuksen laadun tarkastus ja testaus
+    - Mahdottomat yhdistelmät
+    - Yleiset kirjoitusvirheet jne.
+
+## {data-background-image="https://imgur.com/f0WOhHn.png" data-background-size="100%"}
+
+## {data-background-image="https://imgur.com/5UTn4OO.png" data-background-size="100%"}
+
+## {data-background-image="https://imgur.com/ttt2v0J.png" data-background-size="100%"}
+
+## {data-background-image="https://imgur.com/YcOQlv6.png" data-background-size="100%"}
+
+## {data-background-image="https://imgur.com/5mfE1O0.png" data-background-size="100%"}
+
+## {data-background-image="https://imgur.com/LjRtY1H.png" data-background-size="100%"}
+
+## {data-background-image="https://imgur.com/VvFCgsZ.png" data-background-size="100%"}
+
+## {data-background-image="https://imgur.com/mRpbSMC.png" data-background-size="100%"}
+
+## {data-background-image="https://imgur.com/bZxg1xd.png" data-background-size="100%"}
+
+## {data-background-image="https://imgur.com/EGCfZHw.png" data-background-size="100%"}
+
+# Säännölliset lausekkeet
+
+## {data-background-image="https://imgur.com/T3TLNAY.png" data-background-size="50%"}
+
+##
+
+- Kerrataan myöhemmin
+- Mahdollistavat kirjainyhdistelmien abstraktin kuvaamisen
+- Esimerkiksi:
+    - `.` = mikä tahansa merkki
+    - `+` edellinen merkki useamman kerran
+    - `?` edellinen merkki on vapaaehtoinen
+    - jne …
+- Myös hienostuneemmat haut palautuvat tähän!
+- Elanin kontekstissa `.+` tarkoittaa "näytä sisältö, oli se mitä vain"
+
+# Esimerkkejä
+
+## {data-background-image="https://imgur.com/xnLitAU.png" data-background-size="100%"}
+
+## {data-background-image="https://imgur.com/bda0kGR.png" data-background-size="100%"}
