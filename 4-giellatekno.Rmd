@@ -1,0 +1,122 @@
+---
+output: 
+  revealjs::revealjs_presentation:
+    theme: white
+    transition: none
+    css: custom.css
+    self_contained: false
+    center: true
+    reveal_plugins: ["notes"]
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, error=FALSE, dpi = 400,fig.cap = "", cache = T, echo=TRUE)
+library(tidyverse)
+library(glue)
+```
+
+# Kieliteknologian menetelmät
+
+## Yleistä
+
+- Tokenisointi
+- Lemmatisointi
+- POS-tunnistus
+- Morfologinen analyysi
+- Syntaktinen analyysi
+- Nimentunnistus (Named Entity Recognition)
+
+- Eri tasot käytännössä osin päällekkäin!
+
+## Huomattavaa
+
+- Kieliteknologia vahvasti keskittynyt suurimpiin kieliin
+- Nämä ovat yleensä myös morfologisesti melko samanlaisia
+- Ala hyvin jakautunut erilaisten metodien mukaan:
+    - Sääntöpohjaiset mallit
+    - Tilastolliset mallit
+    - Koneoppimismallit
+- Oma näkökantani: voi yhdistää kaikkien parhaat puolet, lopputulos kiinnostaa eniten
+
+# Saamen kieliteknologia: [Giellatekno](http://giellatekno.uit.no/)
+
+##
+
+- Sääntöpohjaiset analysaattorit
+- Sama infrastruktuuri monille kielille
+    - Useita morfologisesti rikkaita kieliä
+- Erittäin hyviä tuloksia, infrastruktuuri on monikäyttöinen
+    - Sekä analyysi että generointi
+    - Laajat sanastot, oppimismateriaalit (Oahpa jne.)
+
+## Morfologinen analysaattori
+
+- Mac tai Linux
+- Windowsilla [VirtualBox](https://www.virtualbox.org/)
+- Asennusohjeet [täällä](http://giellatekno.uit.no/doc/infra/GettingStarted.html)
+
+## Osat
+
+- Analysaattori-ohjelma: HFST tai XFST
+- [SVN-repositorio](http://giellatekno.uit.no/doc/tools/docu-svn-user.html), jossa yhteisesti päivitetyt tiedostot elävät
+- Jokaiselle kielelle oma kansio: main/langs/XXX/
+- Sanasto: XXX/src/morphology/stems/...
+- Morfologia: XXX/src/morphology/affixes/...
+- Huom! Oma tiedosto paikannimille, esim: smn-propernouns.lexc
+- Hyvin yksinkertaistettu selitys…
+
+## {data-background-image="https://imgur.com/NpHpFej.png" data-background-size="100%"}
+
+## Käyttö
+
+- Vaatii ohjelmien asentamista itse lähdekoodista
+- Käyttö periaatteessa helppoa, mutta käytännössä vain komentoriviltä
+
+## Eri saamelaiskielet
+
+- Pohjoissaame pisimmällä
+- Myös koltansaame ja inarinsaame toimivat hyvin
+- Joshua Wilbur työskennellyt paljon piitimensaamen kanssa
+
+## 
+
+- Onnistuneen asennuksen jälkeen:
+
+```
+echo "Sääʹmǩiõllsa mättjem-materiaalin seʹrddet digitaalʼlaž äigga" | smsdep
+```
+
+```
+"<Sääʹmǩiõllsa>"
+	"sääʹmǩiõllsaž" A Sg Acc @OBJ> #1->5
+	"sääʹmǩiõllsaž" A Pl Nom @SUBJ> #1->5
+"<mättjem-materiaalin>"
+	"mättjem-materiaalin" #2->2
+"<seʹrddet>"
+	"seʹrddet" #3->3
+"<digitaalʼlaž>"
+	"digitaalʼlaž" A Attr @>N #4->5
+	"digitaalʼlaž" A Sg Nom @SUBJ> #4->5
+"<äigga>"
+	"äiggad" V Ind Prs Pl3 @FMV #5->0
+	"äiʹǧǧ" N Sg Ill @<ADVL #5->0
+```
+
+##
+
+```
+echo "Kässiluovtjáávráš" | smadep
+```
+
+## Kokeillaan yhdessä
+
+## Miten järjestelmää voitaisiin parantaa?
+
+- Tieto puuttuvista sanoista
+- Tieto vääristä analyyseista
+- Ideoita poistettavista tulkinnoista
+
+- Esimerkiksi puuttuvien sanojen lisääminen itse ei ole kovin vaikeaa!
+    - Pieni varaus, en ole itse juuri lisäillyt niitä ;)
