@@ -458,7 +458,59 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Morfologinen analyysi</li>
 <li>Syntaktinen analyysi</li>
 <li><p>Nimentunnistus (Named Entity Recognition)</p></li>
-<li><p>Eri tasot käytännössä osin päällekkäin!</p></li>
+<li>Eri tasot käytännössä osin päällekkäin!</li>
+<li>Tällaisessa analyysissa ei aina oleellista eroa kirjoitetun kielen ja transkription välillä
+<ul>
+<li>Lähtökohtana teksti</li>
+</ul></li>
+</ul>
+</section><section id="puhuttuun-aineistoon-liittyvaa" class="slide level2">
+<h2>Puhuttuun aineistoon liittyvää</h2>
+<ul>
+<li>Forced alignment
+<ul>
+<li>Tekstin kohdistus nauhoitteeseen</li>
+<li><a href="https://github.com/aalto-speech">Aalto-yliopisto</a></li>
+<li><a href="https://www.phonetik.uni-muenchen.de/Bas/BasHomeeng.html">Bavarian Archive for Speech Signals</a></li>
+<li>Ilmeisesti jo sovellettu Kielipankissa</li>
+</ul></li>
+<li>Speaker diarization</li>
+<li>Puhujantunnistus
+<ul>
+<li>Voi käyttää myös puhujan piirteiden tunnistukseen tai arviointiin</li>
+<li>Ikä, sukupuoli jne.</li>
+</ul></li>
+<li>Puheentunnistus
+<ul>
+<li>Vaatii isoja aineistoja</li>
+<li>Foneemitunnistus, esim. <a href="https://github.com/persephone-tools/persephone">Persephone</a></li>
+</ul></li>
+<li>Puhesynteesi
+<ul>
+<li>Ei vaadi valtavasti aineistoja</li>
+</ul></li>
+</ul>
+</section><section id="section" class="slide level2" data-background-image="https://i.imgur.com/Mh6ev8o.png" data-background-image-size="65%">
+<h2></h2>
+</section><section id="ajatuksia" class="slide level2">
+<h2>Ajatuksia</h2>
+<ul>
+<li>Tekstin kohdennuksessa ääneen valtavasti mahdollisuuksia</li>
+<li>Suuresta arkistoaineistoista voi varmasti saada paljon irti
+<ul>
+<li>Esim. nauhoituslaadun arviointi kohinaa mittaamalla</li>
+</ul></li>
+<li>Mahdollistaa työn priorisoinnin</li>
+</ul>
+<h3 id="varoituksen-sana">Varoituksen sana</h3>
+<ul>
+<li>Kieliteknologialle tyypillistä, että konsepti toimii
+<ul>
+<li>Mielenkiinto enemmän itse järjestelmässä</li>
+<li>Käyttöön soveltamisessa voi olla omia ongelmiaan</li>
+<li>Usein varsinaista käyttö-skriptiä(kään) ei ole edes olemassa!</li>
+<li>… saati käyttöliittymää – toisaalta automatisaatio voi toimia parhaiten näkymättömissä</li>
+</ul></li>
 </ul>
 </section><section id="huomattavaa" class="slide level2">
 <h2>Huomattavaa</h2>
@@ -474,7 +526,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Oma näkökantani: voi yhdistää kaikkien parhaat puolet, lopputulos kiinnostaa eniten</li>
 </ul>
 </section></section>
-<section><section id="saamen-kieliteknologia-giellatekno" class="title-slide slide level1"><h1>Saamen kieliteknologia: <a href="http://giellatekno.uit.no/">Giellatekno</a></h1></section><section id="section" class="slide level2">
+<section><section id="saamen-kieliteknologia-giellatekno" class="title-slide slide level1"><h1>Saamen kieliteknologia: <a href="http://giellatekno.uit.no/">Giellatekno</a></h1></section><section id="section-1" class="slide level2">
 <h2></h2>
 <ul>
 <li>Sääntöpohjaiset analysaattorit</li>
@@ -506,7 +558,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Huom! Oma tiedosto paikannimille, esim: smn-propernouns.lexc</li>
 <li>Hyvin yksinkertaistettu selitys…</li>
 </ul>
-</section><section id="section-1" class="slide level2" data-background-image="https://imgur.com/NpHpFej.png" data-background-size="100%">
+</section><section id="section-2" class="slide level2" data-background-image="https://imgur.com/NpHpFej.png" data-background-size="100%">
 <h2></h2>
 </section><section id="kaytto" class="slide level2">
 <h2>Käyttö</h2>
@@ -521,7 +573,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Myös koltansaame ja inarinsaame toimivat hyvin</li>
 <li>Joshua Wilbur työskennellyt paljon piitimensaamen kanssa</li>
 </ul>
-</section><section id="section-2" class="slide level2">
+</section><section id="section-3" class="slide level2">
 <h2></h2>
 <ul>
 <li>Onnistuneen asennuksen jälkeen:</li>
@@ -540,7 +592,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 &quot;&lt;äigga&gt;&quot;
     &quot;äiggad&quot; V Ind Prs Pl3 @FMV #5-&gt;0
     &quot;äiʹǧǧ&quot; N Sg Ill @&lt;ADVL #5-&gt;0</code></pre>
-</section><section id="section-3" class="slide level2">
+</section><section id="section-4" class="slide level2">
 <h2></h2>
 <pre><code>echo &quot;Kässiluovtjáávráš&quot; | smadep</code></pre>
 </section><section id="kokeillaan-yhdessa" class="slide level2">

@@ -29,6 +29,42 @@ library(glue)
 - Nimentunnistus (Named Entity Recognition)
 
 - Eri tasot käytännössä osin päällekkäin!
+- Tällaisessa analyysissa ei aina oleellista eroa kirjoitetun kielen ja transkription välillä
+    - Lähtökohtana teksti
+
+## Puhuttuun aineistoon liittyvää
+
+- Forced alignment
+    - Tekstin kohdistus nauhoitteeseen
+    - [Aalto-yliopisto](https://github.com/aalto-speech)
+    - [Bavarian Archive for Speech Signals](https://www.phonetik.uni-muenchen.de/Bas/BasHomeeng.html)
+    - Ilmeisesti jo sovellettu Kielipankissa
+- Speaker diarization
+- Puhujantunnistus
+    - Voi käyttää myös puhujan piirteiden tunnistukseen tai arviointiin
+    - Ikä, sukupuoli jne.
+- Puheentunnistus
+    - Vaatii isoja aineistoja
+    - Foneemitunnistus, esim. [Persephone](https://github.com/persephone-tools/persephone)
+- Puhesynteesi
+    - Ei vaadi valtavasti aineistoja
+
+## {data-background-image="https://i.imgur.com/Mh6ev8o.png" background-image-size="65%"}
+
+## Ajatuksia
+
+- Tekstin kohdennuksessa ääneen valtavasti mahdollisuuksia
+- Suuresta arkistoaineistoista voi varmasti saada paljon irti
+    - Esim. nauhoituslaadun arviointi kohinaa mittaamalla
+- Mahdollistaa työn priorisoinnin
+
+### Varoituksen sana
+
+- Kieliteknologialle tyypillistä, että konsepti toimii
+    - Mielenkiinto enemmän itse järjestelmässä
+    - Käyttöön soveltamisessa voi olla omia ongelmiaan
+    - Usein varsinaista käyttö-skriptiä(kään) ei ole edes olemassa!
+    - … saati käyttöliittymää -- toisaalta automatisaatio voi toimia parhaiten näkymättömissä 
 
 ## Huomattavaa
 
