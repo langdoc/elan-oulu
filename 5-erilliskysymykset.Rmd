@@ -47,6 +47,8 @@ library(glue)
 
 # Paikannimet
 
+##
+
 - Mikä on paikannimien rooli Elan-tiedostoissa?
     - Nauhoitetut esimerkit
     - Primääritallenne, jossa on myös muu tieto
