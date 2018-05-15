@@ -21,7 +21,10 @@ library(glue)
 
 ##
 
-- Tierien kopiointi, paikannimet
+- Tierien kopiointi 
+- Paikannimet
+- Tulostusnäkymät
+
 - Lisäkysymykset tervetulleita!
 
 # Tierien kopiointi
@@ -67,3 +70,9 @@ Lähde: [Kotus](https://www.kotus.fi/aineistot/nimiaineistot/paikannimikokoelmat
 - Excel ei ehkä paras, mutta CSV sopii
     - Editointi Excelissä tai LibreOfficessa, tallennus CSV-muodossa
     - Ei salli värikoodausta yms., mutta tiedosto on paremmin turvassa
+
+# Tulostusnäkymät
+
+## Useita vaihtoehtoja
+
+- Halutaanko PDF vai HTML?
